@@ -1,6 +1,6 @@
 body{
 
-    background-color: black;
+      background: #222;
 }
 
 #container{
@@ -59,6 +59,32 @@ body{
   border-image-slice: 1;
 
 
+}
+
+
+
+.module {
+  max-width: 250px;
+  padding: 1rem;
+  color: white;
+
+  position: relative;
+
+  top: 200px;
+  border-width: 3px;
+  border-style: solid;
+  border-image: 
+    linear-gradient(
+      to bottom, 
+      red, 
+      rgba(0, 0, 0, 0)
+    ) 1 100%;
+}
+
+#oh{
+
+    color: orange;
+    font-size: 20px;
 }
 
 .
