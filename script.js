@@ -2,6 +2,8 @@ var ball = document.getElementById('ball');
 var rod1 = document.getElementById('rod1');
 var rod2 = document.getElementById('rod2');
 
+var rule = document.getElementById('rule');
+
 
 //this is function to creating audio onject
 
@@ -137,6 +139,8 @@ window.addEventListener('keypress', function () {
 
     if (event.code === "Enter") {
 
+        rule.style. visibility = "hidden";
+
         if (!gameOn) {
             gameOn = true;
             let ballRect = ball.getBoundingClientRect();
@@ -182,6 +186,9 @@ window.addEventListener('keypress', function () {
                     if ((ballPos < rod1X) || (ballPos > (rod1X + rod1Width))) {
                         
                         storeWin(rod2Name, score);
+
+                         rule.style. visibility = "visible";
+
                         
                     }
                 }
@@ -196,6 +203,7 @@ window.addEventListener('keypress', function () {
                     if ((ballPos < rod2X) || (ballPos > (rod2X + rod2Width))) {
                          
                         storeWin(rod1Name, score);
+                         rule.style. visibility = "visible";
                     
                     }
                 }
